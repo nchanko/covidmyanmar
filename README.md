@@ -7,5 +7,6 @@ We also opened the spreadsheet for public use.
 This git is a new generation of Covidmyanmar data. 
 We only changed the table names and column names without changing the core data. 
 We will upload the csv files for all the data related to Myanmar Covid during 2020. 
+While we are preparing to upload the datasets, you can access our our version of data from data.covidmyanmar.com and covidmyanmar.com
 Stay tune!
 
