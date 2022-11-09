@@ -12,6 +12,7 @@ Stay tune!
 
 ## Future work
 - Add dictionary for column names.
+- Add license
 
 ## Contributors
 
