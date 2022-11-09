@@ -10,7 +10,8 @@ We will upload the csv files for all the data related to Myanmar Covid during 20
 While we are preparing to upload the datasets, you can access our our version of data from data.covidmyanmar.com and covidmyanmar.com
 Stay tune!
 
-
+## Future work
+- Add dictionary for column names.
 
 ## Contributors
 
