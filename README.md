@@ -12,27 +12,31 @@ Stay tune!
 
 
 
-##Volunteers
+## Contributors
 
--Nyein Chan Ko Ko
--Ko Nyan Lynn Myint
--Dr Thet Aung
--Dr Chan Nyein Oo
--Nan Win May Aye
--Dr Kyaw Phyo Khaing
--Kyaw Myint Oo
--Htoo Tay Za
--Htet Wai Aung
--Dr Khun Than Shwe
--Leigh Mitch
--Dr Kaung Myat Wai Yan
--Moe Thazin Shwe
--Ko Kyaw Soe Lin
--Ko Soe Thura
--Dr Mee Mee Ye Mon
--Pan Nu Zaw
--MIMIU
--Ko Ye Maw
--Thibi Team
--Tharthimyay Foundation
--Hnin Pwint Phyu
+These people contributed alot during the fight against COVID-19. Some of them relentlessly inputed data manually from government announcements pdfs into spreadsheet tables for days and nights.
+
+It's not a complete list, many people advised ,encouraged and corrected the mistakes during our data collection process. I apologize to everyone we can't show in this list. But, I do remember the time we are all united in pandemic.
+
+- Nyein Chan Ko Ko
+- Ko Nyan Lynn Myint
+- Dr Thet Aung
+- Dr Chan Nyein Oo
+- Nan Win May Aye
+- Dr Kyaw Phyo Khaing
+- Kyaw Myint Oo
+- Htoo Tay Za
+- Htet Wai Aung
+- Dr Khun Than Shwe
+- Leigh Mitch
+- Dr Kaung Myat Wai Yan
+- Moe Thazin Shwe
+- Ko Kyaw Soe Lin
+- Ko Soe Thura
+- Dr Mee Mee Ye Mon
+- Pan Nu Zaw
+- MIMIU
+- Ko Ye Maw
+- Thibi Team
+- Tharthimyay Foundation
+- Hnin Pwint Phyu
