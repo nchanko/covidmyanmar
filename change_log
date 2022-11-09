@@ -1,0 +1,55 @@
+date	log	actor
+11/03/2020	remove lat_long table	NCKK
+11/03/2020	remove town pcode table	NCKK
+11/03/2020	add symptoms column	NCKK
+11/03/2020	add remakrs column	NCKK
+12/03/2020	add case id columns	NCKK
+12/03/2020	Add travel history column	NCKK
+12/03/2020	add arrival date column	NCKK
+13/03/2020	changed under investigation with pui"	NCKK
+13/03/2020	change"female""male" to "f""m"	NCKK
+14/03/2020	Add array formula  in region code and region	NCKK
+22/03/2020	remove lat_long columns	NCKK
+22/03/2020	added lat and long columns 	NCKK
+22/03/2020	added eng_names table	NCKK
+22/03/2020	added hospital eng name and location eng name columns	NCKK
+24/03/2020	add travel history table and iso code table	HTZ
+29/03/2020	added contact by column	NCKK
+05/04/2020	add cumulative number table 	NCKK
+08/04/2020	add deceased date in discharged date column, 	NCKK
+08/04/2020	added cause of death column	NCKK
+09/04/2020	added situation report	NCKK
+14/04/2020	edit admitted_date to announced date in cumulative number	NCKK
+18/04/2020	added history column	NCKK
+18/04/2020	added contact tracining table	NCKK
+29/04/2020	added deceased and recovered numbers column in cumulative number	NCKK
+09/05/2020	changed admitted date to announced date in cumulative number table	NCKK
+07/05/2020	Added recovery date column in case_reports	NCKK
+12/05/2020	Google sheet privacy policy changed, no longer be seen as public sheet. 	Google
+13/05/2020	deleted mohs corona announcement table	NCKK
+13/05/2020	deleted checkpoint tables	NCKK
+18/05/2020	changed "lab result annouce date" column name to "lab tested date"	NCKK
+06/06/2020	Added numbers of tests run by each labs in "cumulative number" table	NCKK
+01/06/2020	dataset can now be accessed from data.covidmyanmar.com	NCKK
+09/07/2020	Remove negative OLD pui from case sheets	NCKK
+19/08/2020	Added Special columns for rakhine in cumulative number sheet	NCKK
+19/08/2020	Added permanent address column in case report sheet	NCKK
+21/08/2020	Added sittwe lab test in cumulative numebrsheet	NCKK
+01/08/2020	Added lab test double check column in cumulative numbers 	NCKK
+29/08/2020	Added New Labs(Kyawphyu,Naypyitaw,Pathein,Muse) in Cumulative number	NCKK
+06/09/2020	Deleted old pui announcments	NCKK
+09/09/2020	Added rakhine deceased column	NCKK
+12/09/2020	IMPORTANT! Data structure change( Only township and date is announced)	NCKK
+15/10/2020	test capacity sheet has been created ( Rapid Ag test numbers will be recorded there)	NCKK
+15/10/2020	Deleted small lab columns from cumulative numbers 	NCKK
+15/10/2020	Delete lab test double check column	NCKK
+20/10/2020	Added deceased case with underlying diseases column in cumulative sheet	NCKK
+29/10/2020	Remove latlong 	NCKK
+30/10/2020	Added Ref links sheet and remove and replace long links in table with codes	NCKK
+02/11/2020	Separated sit rep tables from main sheet	NCKK
+09/10/2021	Fix #Ref columns in case_reports table	NCKK
+09/10/2021	added deceased numbers in case_reports	NCKK
+15/01/2022	Fixed calculaton error in cumulative number/active cases sheet	NCKK
+06/06/2022	Added new category All DSGHs in test capacity	NLM
+17/08/2022	As of 17-08-22 No Testing data available in test capacity sheet	NLM
+12/09/2022	Added Vaccination Sheet (Merge from parallel forked dataset)	NLM
