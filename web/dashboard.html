@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>COVID-19 Myanmar Dashboard | Real-time Data & Analytics</title>
+<meta name="description" content="Live COVID-19 statistics, case trends, and vaccination progress in Myanmar. Real-time data visualization and analytics. Created by Nyein Chan Ko Ko.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  html, body { margin:0; padding:0; height:100vh; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  body { display: flex; flex-direction: column; background: #f8f9fa; }
+  
+  header { background: white; color: #333; padding: 0.5rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-bottom: 1px solid #e5e5e5; }
+  
+  nav { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+  .logo { font-size: 1rem; font-weight: 600; color: #1e3c72; }
+  .nav-links { display: flex; align-items: center; gap: 2rem; }
+  .nav-links a { color: #666; text-decoration: none; font-weight: 500; padding: 0.4rem 0; border-radius: 4px; transition: all 0.2s; font-size: 0.9rem; position: relative; }
+  .nav-links a i { margin-right: 0.5rem; }
+  .nav-links a:hover { color: #1e3c72; }
+  .nav-links a.active { color: #1e3c72; font-weight: 600; }
+  .nav-links a.active::after { content: ''; position: absolute; bottom: -0.5rem; left: 0; right: 0; height: 2px; background: #1e3c72; }
+  .external-links { display: flex; gap: 1rem; }
+  .external-links a { background: #1e3c72; color: white; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.8rem; }
+  .external-links a i { margin-right: 0.4rem; }
+  .external-links a:hover { background: #2a5298; }
+  
+  #dashboard { flex: 1; min-height: 0; padding: 0.5rem; }
+  iframe { width: 100%; height: 100%; border: none; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); background: white; }
+  
+  @media (max-width: 768px) {
+    header { padding: 1rem; }
+    h1 { font-size: 1.2rem; }
+    nav { padding: 0.5rem 1rem; }
+    nav .external-links { margin-left: 0; margin-top: 0.5rem; }
+    #dashboard { padding: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">covidmyanmar.com</div>
+    <div class="nav-links">
+      <a href="dashboard.html" class="active"><i class="fas fa-chart-line"></i> Dashboard</a>
+      <a href="network_chart.html"><i class="fas fa-project-diagram"></i> Network Analysis</a>
+      <a href="index.html"><i class="fas fa-info-circle"></i> About</a>
+      <div class="external-links">
+        <a href="https://github.com/nchanko/covidmyanmar" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://data.covidmyanmar.com" target="_blank" rel="noopener"><i class="fas fa-database"></i> Data Source</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div id="dashboard">
+  <iframe 
+    src="https://lookerstudio.google.com/embed/reporting/445c1281-c6ea-45e4-9bc0-5d561c511354/page/I44CB"
+    allowfullscreen
+    sandbox="allow-scripts allow-same-origin allow-popups">
+  </iframe>
+</div>
+
+</body>
+</html>

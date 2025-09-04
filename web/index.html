@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About COVID-19 Myanmar Project | Real-time Dashboard</title>
+<meta name="description" content="Learn about the COVID-19 Myanmar project - timeline, contributors, impact, and data sources. Community-driven pandemic tracking initiative.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  html, body { margin:0; padding:0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
+  body { background: #f8fafc; min-height: 100vh; }
+  
+  header { background: white; color: #333; padding: 0.5rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-bottom: 1px solid #e5e5e5; }
+  
+  nav { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+  .logo { font-size: 1rem; font-weight: 600; color: #1e3c72; }
+  .nav-links { display: flex; align-items: center; gap: 2rem; }
+  .nav-links a { color: #666; text-decoration: none; font-weight: 500; padding: 0.4rem 0; border-radius: 4px; transition: all 0.2s; font-size: 0.9rem; position: relative; }
+  .nav-links a i { margin-right: 0.5rem; }
+  .nav-links a:hover { color: #1e3c72; }
+  .nav-links a.active { color: #1e3c72; font-weight: 600; }
+  .nav-links a.active::after { content: ''; position: absolute; bottom: -0.5rem; left: 0; right: 0; height: 2px; background: #1e3c72; }
+  .external-links { display: flex; gap: 1rem; }
+  .external-links a { background: #1e3c72; color: white; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.8rem; }
+  .external-links a i { margin-right: 0.4rem; }
+  .external-links a:hover { background: #2a5298; }
+  
+  .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+  
+  .hero-section { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+  .hero { background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+  .hero h2 { color: #1e3c72; margin-top: 0; font-size: 1.5rem; font-weight: 600; }
+  .hero p { color: #4a5568; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem; }
+  
+  .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  .stat-card { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center; transition: all 0.3s ease; border-left: 3px solid #1e3c72; }
+  .stat-card:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0,0,0,0.12); }
+  .stat-number { font-size: 1.4rem; font-weight: 600; color: #1e3c72; margin-bottom: 0.3rem; }
+  .stat-label { color: #666; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  
+  .section { background: white; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+  .section:nth-child(even) { background: #f8fafc; }
+  .section h3 { color: #1e3c72; margin-top: 0; font-size: 1.3rem; font-weight: 600; }
+  
+  .timeline { position: relative; padding-left: 3rem; }
+  .timeline::before { content: ''; position: absolute; left: 1.5rem; top: 0; bottom: 0; width: 3px; background: #1e3c72; border-radius: 2px; }
+  .timeline-item { position: relative; margin-bottom: 2rem; padding-left: 2rem; background: white; border-radius: 12px; padding: 1.5rem 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid #e3f2fd; transition: all 0.3s ease; }
+  .timeline-item:hover { transform: translateX(10px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-left-color: #1e3c72; }
+  .timeline-item::before { content: ''; position: absolute; left: -2.5rem; top: 1.5rem; width: 12px; height: 12px; background: #1e3c72; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 0 3px #e3f2fd; z-index: 2; }
+  .timeline-date { font-weight: 600; color: #1e3c72; margin-bottom: 0.8rem; font-size: 1rem; }
+  .timeline-item p { margin: 0; color: #4a5568; line-height: 1.6; font-size: 0.95rem; }
+  
+  .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+  .project-image { width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+  .project-image:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+  .image-caption { text-align: center; margin-top: 0.5rem; font-size: 0.9rem; color: #666; font-style: italic; }
+  
+  .contributor-list { columns: 3; column-gap: 2rem; list-style-type: disc; margin: 1rem 0; }
+  .contributor-list li { margin-bottom: 0.5rem; break-inside: avoid; }
+  
+  .links { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0; }
+  .btn { display: inline-block; padding: 0.75rem 1.5rem; background: #1e3c72; color: white; text-decoration: none; border-radius: 6px; font-weight: 500; transition: all 0.2s; }
+  .btn:hover { background: #2a5298; }
+  .btn-secondary { background: #6c757d; }
+  .btn-secondary:hover { background: #5a6268; }
+  
+  @media (max-width: 768px) {
+    header { padding: 1rem; }
+    h1 { font-size: 1.2rem; }
+    nav { padding: 0.5rem 1rem; }
+    nav .external-links { margin-left: 0; margin-top: 0.5rem; }
+    .container { padding: 1rem; }
+    .hero-section { grid-template-columns: 1fr; gap: 1rem; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .hero { padding: 1.5rem; }
+    .hero h2 { font-size: 1.5rem; }
+    .section { padding: 1.5rem; }
+    .timeline { padding-left: 2rem; }
+    .timeline::before { left: 1rem; }
+    .timeline-item { padding: 1rem 1.5rem; margin-bottom: 2rem; }
+    .timeline-item::before { left: -2rem; width: 12px; height: 12px; border: 2px solid white; }
+    .timeline-item:hover { transform: translateX(5px); }
+    .contributor-list { columns: 2; }
+  }
+  
+  @media (max-width: 480px) {
+    .timeline { padding-left: 1.5rem; }
+    .timeline::before { left: 0.75rem; width: 2px; }
+    .timeline-item { padding: 0.8rem 1rem; }
+    .timeline-item::before { left: -1.5rem; width: 10px; height: 10px; }
+    .timeline-date { font-size: 1rem; }
+    .timeline-date::before { content: '📅'; font-size: 0.9rem; }
+    .contributor-list { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">covidmyanmar.com</div>
+    <div class="nav-links">
+      <a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+      <a href="network_chart.html"><i class="fas fa-project-diagram"></i> Network Analysis</a>
+      <a href="index.html" class="active"><i class="fas fa-info-circle"></i> About</a>
+      <div class="external-links">
+        <a href="https://github.com/nchanko/covidmyanmar" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://data.covidmyanmar.com" target="_blank" rel="noopener"><i class="fas fa-database"></i> Data Source</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="hero-section">
+    <div class="hero">
+      <h2>About COVID-19 Myanmar Project</h2>
+      <p>Initiated by <a href="https://www.linkedin.com/in/nyeinchankoko" target="_blank" rel="noopener">Dr. Nyein Chan Ko Ko</a> in early 2020, this community-driven initiative emerged as Myanmar's first comprehensive COVID-19 tracking dashboard. Inspired by Johns Hopkins University's coronavirus dashboard, the project started as an individual effort but quickly grew into a collaborative community project that would not have been possible without the dedicated support of volunteers who contributed data, verified information, and maintained the system.</p>
+      <p>What began as a simple Google spreadsheet tracking Myanmar's first suspected case on January 31, 2020, evolved into a sophisticated dashboard through the collective efforts of 22+ volunteers. This community collaboration made it an essential resource for researchers, developers, and the public throughout the pandemic, providing detailed case data when official sources only offered cumulative numbers.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Years Active</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">22+</div>
+        <div class="stat-label">Contributors</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">Jan 2020</div>
+        <div class="stat-label">Started</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">Daily</div>
+        <div class="stat-label">Updates</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Project Timeline</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">December 2019</div>
+        <p>First awareness of coronavirus outbreak in Wuhan, China. Initially didn't receive much attention as it wasn't the first outbreak news.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">January 22, 2020</div>
+        <p>Johns Hopkins University announced first coronavirus dashboard. This inspired the idea to create a similar tracking system for Myanmar before the pandemic reached the country.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">January 29, 2020</div>
+        <p>First version of dashboard created with Google Data Studio. A simple one-page dashboard with basic metrics.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">January 31, 2020</div>
+        <p>Myanmar announced first suspected case. Project started Google spreadsheet data collection with date, age, sex, location, hospital, and reference links.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">February 4, 2020</div>
+        <p>Dashboard publicly launched at covidmyanmar.com and m.covidmyanmar.com for mobile. Featured comprehensive filtering options not available elsewhere.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">February 2020</div>
+        <p>Ministry released official ArcGIS dashboard 5 days after this project launched. However, it lacked the filtering capabilities that made this project unique.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">March 2020</div>
+        <p>Volunteer contributors began joining the project. Community collaboration started expanding data collection and verification processes.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">March 11, 2020</div>
+        <p>WHO declared COVID-19 pandemic. Project became increasingly critical as Myanmar faced growing case numbers and public demand for accurate data.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2020 to mid 2021</div>
+        <p>Community-driven continuous daily updates, network chart creation (nc.covidmyanmar.com), and volunteer coordination. Project sustained through collective volunteer effort across Myanmar.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Project Impact & Recognition</h3>
+    <p>Through the collective efforts of volunteers and community contributors, the COVID-19 Myanmar project became a critical resource during Myanmar's pandemic response:</p>
+    <ul>
+      <li><strong>Community-driven success:</strong> Myanmar's first comprehensive COVID-19 tracking dashboard, made possible only through volunteer collaboration</li>
+      <li><strong>Essential for researchers:</strong> Volunteer-maintained detailed case-by-case data when official sources only offered cumulative numbers</li>
+      <li><strong>Developer community support:</strong> Community-contributed data enabled app developers and researchers to create prediction models and analysis tools</li>
+      <li><strong>Volunteer-powered transparency:</strong> Community effort served as an interpreter between government announcements and public understanding</li>
+      <li><strong>Collaborative innovation:</strong> Volunteers helped create unique network chart showing case relationships and transmission patterns</li>
+      <li><strong>Sustained by community:</strong> Featured in Myanmar COVID-19 resource collections and maintained by dedicated volunteers across the country</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Community-Driven Technical Innovation</h3>
+    <p>Through collaborative volunteer efforts, this project overcame significant technical and data challenges:</p>
+    <ul>
+      <li><strong>Collective Data Extraction:</strong> Volunteers processed government announcements that were often inconsistent, since no API or structured data was available</li>
+      <li><strong>Community-Built Dashboard:</strong> Volunteers helped build comprehensive dashboard with filtering capabilities that official ArcGIS system lacked</li>
+      <li><strong>Volunteer Data Entry:</strong> Community contributors recorded date, age, sex, location, hospital, and reference links for each case</li>
+      <li><strong>Distributed Maintenance:</strong> Available at covidmyanmar.com, m.covidmyanmar.com (mobile), and bit.ly/covidmyanmar through volunteer support</li>
+      <li><strong>Community Visualization:</strong> Volunteers contributed to unique network chart showing transmission relationships between confirmed cases</li>
+      <li><strong>Volunteer-Sustained Updates:</strong> Maintained through dedicated volunteer effort, ensuring continuous data availability</li>
+      <li><strong>Community-Supported Dataset:</strong> Public spreadsheet (bit.ly/covidmmdata) maintained by volunteers to support the broader developer and research community</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Project Screenshots & Visuals</h3>
+    <p>Screenshots showcasing the dashboard evolution and key features during the pandemic:</p>
+    <div class="image-grid">
+      <div>
+        <img src="march2020.png" alt="COVID-19 Myanmar Dashboard - March 2020" class="project-image">
+        <div class="image-caption">Dashboard in March 2020 - Early pandemic tracking</div>
+      </div>
+      <div>
+        <img src="may2020.png" alt="COVID-19 Myanmar Dashboard - May 2020" class="project-image">
+        <div class="image-caption">Dashboard in May 2020 - Enhanced visualizations</div>
+      </div>
+      <div>
+        <img src="networkchart.png" alt="COVID-19 Myanmar Network Chart" class="project-image">
+        <div class="image-caption">Network chart showing case relationships and transmission patterns</div>
+      </div>
+      <div>
+        <img src="featured_in_moh_thai.png" alt="COVID-19 Myanmar Project Featured in Thailand Ministry of Health" class="project-image">
+        <div class="image-caption">Project featured in Thailand Ministry of Health documentation</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Contributors & Volunteers</h3>
+    <p>Special thanks to all who contributed to this project:</p>
+    <ul class="contributor-list">
+      <li><a href="https://www.linkedin.com/in/nyeinchankoko" target="_blank" rel="noopener">Nyein Chan Ko Ko</a></li>
+      <li>Ko Nyan Lynn Myint</li>
+      <li>Dr Thet Aung</li>
+      <li>Dr Chan Nyein Oo</li>
+      <li>Nan Win May Aye</li>
+      <li>Dr Kyaw Phyo Khaing</li>
+      <li>Kyaw Myint Oo</li>
+      <li>Htoo Tay Za</li>
+      <li>Htet Wai Aung</li>
+      <li>Dr Khun Than Shwe</li>
+      <li>Leigh Mitch</li>
+      <li>Dr Kaung Myat Wai Yan</li>
+      <li>Moe Thazin Shwe</li>
+      <li>Ko Kyaw Soe Lin</li>
+      <li>Ko Soe Thura</li>
+      <li>Dr Mee Mee Ye Mon</li>
+      <li>Ma Pan Nu Zaw</li>
+      <li>MIMIU</li>
+      <li>Ko Ye Maw</li>
+      <li>Thibi Team</li>
+      <li>Tharthimyay Foundation</li>
+      <li>Hnin Pwint Phyu</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Research & Publications Using This Project</h3>
+    <p>During the active pandemic period (2020-2021), the COVID-19 Myanmar dashboard and dataset were used by researchers, organizations, and institutions. While many pandemic-era projects have since become inactive, some references remain accessible:</p>
+    <ul>
+      <li><strong><a href="https://bit.ly/CV19MM" target="_blank" rel="noopener">COVID-19 Myanmar Resources Collection</a></strong> - Comprehensive resource compilation and links</li>
+      <li><strong><a href="https://docs.google.com/presentation/d/1GCWSB9MG4Ivq9fp0FqEDGTkXYbGYfM_kCY6WxYDOY1o/edit?slide=id.g9dc12e01e8_0_110#slide=id.g9dc12e01e8_0_110" target="_blank" rel="noopener">COVID-19 Myanmar Dashboard Presentation</a></strong> - Detailed project presentation and methodology overview</li>
+      <li><strong><a href="https://rstudio-pubs-static.s3.amazonaws.com/709924_c31710a74adb4420b2f991c08973c65f.html" target="_blank" rel="noopener">Data Science Analysis</a></strong> - Statistical analysis and visualization using covidmyanmar.com data</li>
+      <li><strong><a href="https://centerforpolicyimpact.org/wp-content/uploads/sites/18/2020/10/Myanmar-National-Response-to-COVID_19.pdf" target="_blank" rel="noopener">Myanmar National Response to COVID-19</a></strong> - Policy analysis report by Center for Policy Impact</li>
+      <li><strong><a href="https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Myanmar" target="_blank" rel="noopener">Wikipedia: COVID-19 pandemic in Myanmar</a></strong> - Comprehensive encyclopedia entry</li>
+      <li><strong><a href="https://asiafoundation.org/wp-content/uploads/2021/10/Myanmar_Covid-19-and-Complex-Conflicts_ENG.pdf" target="_blank" rel="noopener">Myanmar COVID-19 and Complex Conflicts</a></strong> - Research report by The Asia Foundation</li>
+      <li><strong><a href="https://summit.g0v.tw/2020/agenda/2020-12-05/5efa11b2ba206b030d66a3f1/" target="_blank" rel="noopener">g0v Summit 2020 Taiwan</a></strong> - Presentation on civic tech response to pandemic</li>
+    </ul>
+    <p><em>Note: Many COVID-19 community projects and resources from 2020-2021 are no longer actively maintained, reflecting the natural lifecycle of pandemic response initiatives.</em></p>
+  </div>
+
+  <div class="section">
+    <h3>Data Sources & Methodology</h3>
+    <p>The project pioneered innovative data collection methods during Myanmar's early pandemic response:</p>
+    <ul>
+      <li><strong>Primary Source:</strong> Ministry of Health and Sports (MOHS) official news announcements</li>
+      <li><strong>Manual Extraction Process:</strong> Reading entire news releases and extracting key facts from inconsistent government announcements</li>
+      <li><strong>Data Validation:</strong> Cross-referencing multiple announcements to resolve inconsistencies</li>
+      <li><strong>Quality Assurance:</strong> Including reference links for every data point to ensure credibility</li>
+      <li><strong>Volunteer Network:</strong> Community contributors helped input and verify data accuracy</li>
+      <li><strong>Transparency Advocacy:</strong> Public feedback on Facebook when official data showed inconsistencies</li>
+    </ul>
+    
+    <div class="links">
+      <a href="https://data.covidmyanmar.com" target="_blank" rel="noopener" class="btn">Access Raw Data</a>
+      <a href="https://github.com/nchanko/covidmyanmar" target="_blank" rel="noopener" class="btn btn-secondary">View Source Code</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
